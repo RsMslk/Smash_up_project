@@ -12,13 +12,9 @@ public:
 		fird_place = f_3;
 		defense = d;
 	}
-	void add_minion(Minion min)
+	void add_card(Card c)
 	{
-		play_minion.push_back(min);
-	}
-	void add_action(Action act)
-	{
-		play_action.push_back(act);
+		play_cards.push_back(c);
 	}
 	void (*base_feature)();
 private:
@@ -27,7 +23,6 @@ private:
 	int second_place;
 	int fird_place;
 	int defense;
-	vector<Minion> play_minion;
-	vector<Action> play_action;
+	vector<Card> play_cards;
 };
 #endif // !BASE_H

@@ -7,6 +7,7 @@ using namespace std;
 #include "Card.h"
 #include "Base.h"
 #include "Table.h"
+#include "Player.h"
 
 int main()
 {
