@@ -12,22 +12,28 @@ public:
 		fird_place = f_3;
 		defense = d;
 	}
-	void add_minion(Minion min)
+	void add_card(Card* c)
 	{
-		play_minion.push_back(min);
+		play_cards.push_back(c);
 	}
-	void add_action(Action act)
+	bool sum_score()
 	{
-		play_action.push_back(act);
+		int s = 0;
+		for (unsigned int i = 0; i < play_cards.size(); i++)
+		{
+			s += play_cards[i]->power_score;
+		}
+		if (s >= defense)
+			return true;
+		return false;
 	}
 	void (*base_feature)();
-private:
 	string name_base;
+	vector<Card*> play_cards;
+private:
 	int first_place;
 	int second_place;
 	int fird_place;
 	int defense;
-	vector<Minion> play_minion;
-	vector<Action> play_action;
 };
 #endif // !BASE_H

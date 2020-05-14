@@ -2,47 +2,34 @@
 #ifndef CARD_H
 #define CARD_H
 
-class Minion
+class Card
 {
 public:
-	Minion(string name, int score, void func())
+	Card(string name, int score, void(*func)(), int t)
 	{
-		name_minion = name;
+		name_card = name;
 		power_score = score;
+		type = t;
 		min_act = func;
 	}
+	string name_card;
 	void (*min_act)();
-private:
-	string name_minion;
 	int power_score;
-};
-
-class Action
-{
-public:
-	Action(string name, void func())
-	{
-		name_action = name;
-		act = func;
-	}
-	void (*act)();
 private:
-	string name_action;
+	int type; // 0 - приспешник, 1 - действие
 };
 
 class Fraction
 {
 public:
-	Fraction(string name, vector<class Minion> min, vector<class Action> act)
+	Fraction(string name, vector<Card*> c)
 	{
 		name_fraction = name;
-		minions = min;
-		actions = act;
+		cards = c;
 	}
-private:
+	vector<Card*> cards;
 	string name_fraction;
-	vector<class Minion> minions;
-	vector<class Action> actions;
+private:
 };
 
 #endif // !CARD_H
