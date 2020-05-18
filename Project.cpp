@@ -142,17 +142,17 @@ int main()
 		cin >> n1 >> n2;
 		n1--;
 		n2--;
-		Player* q = new Player(s, all_fractions[n1], all_fractions[n2]);
+		Player* q = new Player(s, all_fractions[n1], all_fractions[n2], i);
 		all_fractions.erase(all_fractions.begin() + n1);
 		n2--;
 		all_fractions.erase(all_fractions.begin() + n2);
 		table->add_player(q);
 	}
-	bool c = true;
-	while (c)
+	while (table->end_game())
 	{
-		table->play_turn %= N;
-		end_game(table);
+		if (N!=0)
+			table->play_turn %= N;
+		//end_game(table);
 		table->print_bases();
 		cout << table->players[table->play_turn]->nickname << ", you may go! Choose one card in your hand:\n";
 		table->players[table->play_turn]->print_hand();
@@ -162,25 +162,30 @@ int main()
 		n1--;
 		n2--;
 		table->place_card_on_base(n1, n2);
-		if (table->check_capture() != nullptr)
+		Base* p = table->check_capture();
+		if (p != nullptr)
 		{
+			cout << p->name_base <<" is ready to be captured.\n";
+			//Этап до захвата базы
+			for (int i = 0; i < p->play_cards.size(); i++)
+			{
+				vector<int> sum_of_scores(N);
+				if (p->play_cards[i]->type == 0)
+				{
+					sum_of_scores[p->play_cards[i]->player_card] += p->play_cards[i]->power_score;
+				}
+			}
+			for (int i = 0; i < N; i++)
+			{
+
+			}
+			//Этап после захвата базы
 		}
 		table->play_turn++;
-		c = false;
 	}
 	return 0;
 }
 
-
-bool end_game(Table* table)
-{
-	for (unsigned int i = 0; i < table->players.size(); i++)
-	{
-		if (table->players[i]->total_score >= 15)
-			return false;
-	}
-	return true;
-}
 
 void special1()
 {

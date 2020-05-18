@@ -25,6 +25,15 @@ public:
 			all_bases.erase(all_bases.begin() + k);
 		}
 	}
+	bool end_game()
+	{
+		for (unsigned int i = 0; i < players.size(); i++)
+		{
+			if (players[i]->total_score >= 15)
+				return false;
+		}
+		return true;
+	}
 	void print_bases()
 	{
 		cout << "This is list of available bases:\n";
@@ -35,7 +44,12 @@ public:
 	}
 	void place_card_on_base(int a, int b)
 	{
+		int k;
+		srand(time(0));
+		k = rand() % players[play_turn]->all_cards.size();
 		game_base[b]->add_card(players[play_turn]->hand_list[a]);
+		players[play_turn]->hand_list.erase(players[play_turn]->hand_list.begin()+a);
+		players[play_turn]->hand_list.push_back(players[play_turn]->all_cards[k]);
 	}
 	Base* check_capture()
 	{

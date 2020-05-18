@@ -30,10 +30,10 @@ public:
 	void (*base_feature)();
 	string name_base;
 	vector<Card*> play_cards;
-private:
 	int first_place;
 	int second_place;
 	int fird_place;
+private:
 	int defense;
 };
 #endif // !BASE_H

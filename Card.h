@@ -15,8 +15,9 @@ public:
 	string name_card;
 	void (*min_act)();
 	int power_score;
+	int player_card;
+	int type;  // 0 - приспешник, 1 - действие
 private:
-	int type; // 0 - приспешник, 1 - действие
 };
 
 class Fraction
