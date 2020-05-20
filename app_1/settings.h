@@ -13,10 +13,15 @@ class Settings : public QDialog
 
 public:
     explicit Settings(QWidget *parent = nullptr);
+    void setNickname(QString nickname);
     ~Settings();
 
 private slots:
     void on_change_avatar_button_clicked();
+    void on_buttonBox_accepted();
+
+signals:
+    void nicknameChanged(QString newNickname);
 
 private:
     Ui::Settings *ui;
