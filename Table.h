@@ -25,6 +25,21 @@ public:
 			all_bases.erase(all_bases.begin() + k);
 		}
 	}
+	void delete_base(class Base* p, vector<class Base*> all_bases)
+	{
+		int k;
+		srand(time(0));
+		int i;
+		for (i = 0; i < game_base.size(); i++)
+		{
+			if (game_base[i] == p)
+				break;
+		}
+		game_base.erase(game_base.begin() + i);
+		k = rand() % all_bases.size();
+		game_base.push_back(all_bases[k]);
+		all_bases.erase(all_bases.begin() + k);
+	}
 	bool end_game()
 	{
 		for (unsigned int i = 0; i < players.size(); i++)

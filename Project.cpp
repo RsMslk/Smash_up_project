@@ -23,9 +23,6 @@ void act6();
 void act7();
 void act8();
 
-bool end_game(Table* table);
-bool check_capture(Table* table);
-
 Card* pirate1 = new Card("Pirate King", 5, special1, 0);
 Card* pirate21 = new Card("Buccaneer", 4, special2, 0);
 Card* pirate22 = new Card("Buccaneer", 4, special2, 0);
@@ -152,7 +149,6 @@ int main()
 	{
 		if (N!=0)
 			table->play_turn %= N;
-		//end_game(table);
 		table->print_bases();
 		cout << table->players[table->play_turn]->nickname << ", you may go! Choose one card in your hand:\n";
 		table->players[table->play_turn]->print_hand();
@@ -167,21 +163,54 @@ int main()
 		{
 			cout << p->name_base <<" is ready to be captured.\n";
 			//Этап до захвата базы
+			vector<int> sum_of_scores(N);
 			for (int i = 0; i < p->play_cards.size(); i++)
 			{
-				vector<int> sum_of_scores(N);
 				if (p->play_cards[i]->type == 0)
 				{
 					sum_of_scores[p->play_cards[i]->player_card] += p->play_cards[i]->power_score;
 				}
 			}
+			int place1 = 0, place2 = -1, place3 = -1;
 			for (int i = 0; i < N; i++)
 			{
-
+				if (sum_of_scores[i] >= sum_of_scores[place1])
+				{
+					place3 = place2;
+					place2 = place1;
+					place1 = i;
+				}
+				else if (place2 > -1)
+				{
+					if (sum_of_scores[i] >= sum_of_scores[place2] && sum_of_scores[i] != 0)
+					{
+						place3 = place2;
+						place2 = i;
+					}
+				}
+				else if (place2 > -1)
+					if (sum_of_scores[i] >= sum_of_scores[place3] && sum_of_scores[i] != 0)
+						place3 = i;
 			}
+			table->players[place1]->total_score += p->first_place;
+			cout << table->players[place1]->nickname << " gets " << p->first_place << " points.\n";
+			if (place2 > -1)
+				table->players[place2] += p->second_place;
+			if (place3 > -1)
+				table->players[place3] += p->fird_place;
+			cout << p->name_base << " was captured.\n";
 			//Этап после захвата базы
+			table->delete_base(p, all_bases);
 		}
 		table->play_turn++;
+	}
+	for (int i = 0; i < N; i++)
+	{
+		if (table->players[i]->total_score >= 15)
+		{
+			cout << table->players[i]->nickname << " is a winner!\n";
+			break;
+		}
 	}
 	return 0;
 }
