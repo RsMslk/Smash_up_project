@@ -5,6 +5,7 @@
 #include <QLine>
 #include "game_window.h"
 #include "settings.h"
+#include <QPixmap>
 
 QString player_nickname_mainwindow = NULL;
 
@@ -13,7 +14,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
+    //ui->profile_pic_label->setText(NULL);
 }
 
 MainWindow::~MainWindow()

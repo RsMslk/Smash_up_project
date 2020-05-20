@@ -21,6 +21,6 @@ void Settings::on_change_avatar_button_clicked()
 {
     QString file_name = QFileDialog::getOpenFileName(this, QString::fromUtf8("Имя файла"), "file.txt");
     qDebug()<< file_name;
-
+    QPixmap()
 
 }
