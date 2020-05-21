@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>avatar_default.png</file>
+        <file>images/avatar_default.png</file>
+        <file>images/background.jpg</file>
+    </qresource>
+</RCC>
