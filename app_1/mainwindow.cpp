@@ -12,8 +12,12 @@
 #include <select_player.h>
 
 extern QString  new_nickname_global;
+//extern QPixmap new_avatar;
+extern QString file_name;
 
 QString player_nickname_mainwindow = NULL;
+//QPixmap player_avatar_mainwindow = QPixmap(":/images/images/avatar_default.png");
+QString player_avatar_file_path = ":/images/images/default.png";
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -105,10 +109,15 @@ void MainWindow::on_settings_button_clicked()
      settings.setModal(true);
      settings.exec();
      while(1){
-        if(new_nickname_global != "Default"){
+        if(new_nickname_global != NULL){
             player_nickname_mainwindow = new_nickname_global;
-            //ui->setupUi(this);
+            //player_avatar_mainwindow = new_avatar;
+            player_avatar_file_path = file_name;
+           // ui->profile_pic_label->setPixmap(player_avatar_file_path);
             ui->nickname_label->setText(player_nickname_mainwindow);
+            break;
+        }else{
+            //ui->profile_pic_label->setPixmap(player_avatar_mainwindow);
             break;
         }
      }

@@ -12,7 +12,7 @@
 #include <table.h>
 
 
-QString player_nickname = NULL;
+//QString player_nickname = NULL;
 
 Card* pirate1 = new Card("Pirate King", 5);
 Card* pirate21 = new Card("Buccaneer", 4);

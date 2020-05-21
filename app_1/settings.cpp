@@ -6,8 +6,12 @@
 #include <QPixmap>
 
 extern QString  player_nickname_mainwindow;
+//extern QPixmap player_avatar_mainwindow;
+extern QString player_avatar_file_path;
 
-QString new_nickname_global = "Default";
+QString new_nickname_global = NULL;
+//QPixmap new_avatar;
+QString file_name;
 
 Settings::Settings(QWidget *parent) :
     QDialog(parent),
@@ -15,6 +19,7 @@ Settings::Settings(QWidget *parent) :
 {
     ui->setupUi(this);
     ui->old_nickname->setText(player_nickname_mainwindow);
+    ui->old_avatar->setPixmap(player_avatar_file_path);
 }
 
 Settings::~Settings()
@@ -25,7 +30,7 @@ Settings::~Settings()
 
 void Settings::on_change_avatar_button_clicked()
 {
-    QString file_name = QFileDialog::getOpenFileName(this, QString::fromUtf8("Имя файла"), "file.txt");
+    file_name = QFileDialog::getOpenFileName(this, QString::fromUtf8("Имя файла"), "file.txt");
     qDebug()<< file_name;
 
 
@@ -37,7 +42,8 @@ void Settings::on_buttonBox_accepted()
 {
     QString new_nickname = ui->new_nickname_line->text();
     new_nickname_global =  ui->new_nickname_line->text();
+ //   new_avatar = QPixmap(file_name);
    // emit nicknameChanged(new_nickname);
-    //QObject::connect(ui->new_nickname_line->text(), nicknameChanged(new_nickname),mainwindow->nickname_field->text());
+   //QObject::connect(ui->new_nickname_line->text(), nicknameChanged(new_nickname),mainwindow->nickname_field->text());
 }
 
