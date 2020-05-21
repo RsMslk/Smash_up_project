@@ -19,23 +19,19 @@ SOURCES += \
     game_window.cpp \
     main.cpp \
     mainwindow.cpp \
+    select_player.cpp \
     settings.cpp
 
 HEADERS += \
-    base.h \
-    card.h \
-    card.h \
     game_window.h \
     mainwindow.h \
-    player.h \
-    player.h \
-    settings.h \
-    table.h \
-    table.h
+    select_player.h \
+    settings.h
 
 FORMS += \
     game_window.ui \
     mainwindow.ui \
+    select_player.ui \
     settings.ui
 
 # Default rules for deployment.

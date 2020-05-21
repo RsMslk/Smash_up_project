@@ -6,6 +6,12 @@
 #include "game_window.h"
 #include "settings.h"
 #include <QPixmap>
+#include <QPalette>
+#include <QPainter>
+#include <QPaintEvent>
+#include <select_player.h>
+
+extern QString  new_nickname_global;
 
 QString player_nickname_mainwindow = NULL;
 
@@ -14,7 +20,21 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    //ui->profile_pic_label->setText(NULL);
+    QPixmap background (":/images/images/background.jpg");
+    //background = background.scaled(this->size(), Qt::IgnoreAspectRatio);
+    QPalette palette;
+    palette.setBrush(QPalette::Background, background);
+    this->setPalette(palette);
+    ui->nickname_label->setStyleSheet("font-size:72px; "
+                                      " color: rgb(255, 255, 255)");
+    ui->insert_nickname_label ->setStyleSheet("font-size:16px; color: rgb(255, 255, 255)");
+    ui->quit_button->setStyleSheet("font-size: 16px");
+    ui->online_button->setStyleSheet("font-size: 16px");
+    ui->offline_button->setStyleSheet("font-size: 16px");
+    ui-> settings_button ->setStyleSheet("font-size: 16px");
+
+   // m_pMyWidget = new QWidget(this);
+   //ui->profile_pic_label->setText(NULL);
 }
 
 MainWindow::~MainWindow()
@@ -59,6 +79,7 @@ void MainWindow::on_offline_button_clicked()
 {
 //    close();
 //    hide();
+    //select_player()
     game_window game;
     game.setModal(true);
     game.exec();
@@ -69,6 +90,8 @@ void MainWindow::on_online_button_clicked()
 {
  //   close();
   //  hide();
+    select_player select;
+    select .exec();
     game_window game;
     game.setModal(true);
     game.exec();
@@ -81,5 +104,13 @@ void MainWindow::on_settings_button_clicked()
      Settings settings;
      settings.setModal(true);
      settings.exec();
+     while(1){
+        if(new_nickname_global != "Default"){
+            player_nickname_mainwindow = new_nickname_global;
+            //ui->setupUi(this);
+            ui->nickname_label->setText(player_nickname_mainwindow);
+            break;
+        }
+     }
 
 }
