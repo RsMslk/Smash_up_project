@@ -10,7 +10,7 @@ using namespace std;
 #include "Player.h"
 #include "Table.h"
 
-void special1();
+void special1(); //до того как считаем счет на базе можем перенести туда приспешника хз как реализовать это нормально
 void special2();
 void special3();
 void special4();
@@ -108,6 +108,8 @@ Base* base6 = new Base("Tortuga", 4, 3, 2, 21);
 Base* base7 = new Base("Cave of Shinies", 4, 2, 1, 23);
 Base* base8 = new Base("Mushroom Kingdom", 5, 3, 2, 20);
 
+Table* table;
+
 int main()
 {
 	vector<Card*> pirates = { pirate1, pirate21, pirate22, pirate31, pirate32, pirate33, pirate41, pirate42, pirate43, pirate44 };
@@ -124,7 +126,7 @@ int main()
 	int N, n1, n2;
 	string s;
 	cin >> N;
-	Table* table = new Table(N);
+	table = new Table(N);
 	table->creating_bases(all_bases);
 	for (int i = 0; i < N; i++)
 	{
@@ -171,33 +173,16 @@ int main()
 					sum_of_scores[p->play_cards[i]->player_card] += p->play_cards[i]->power_score;
 				}
 			}
-			int place1 = 0, place2 = -1, place3 = -1;
-			for (int i = 0; i < N; i++)
+			int place1 = 0, place2 = 1;
+			if (sum_of_scores[place1] < sum_of_scores[place2])
 			{
-				if (sum_of_scores[i] >= sum_of_scores[place1])
-				{
-					place3 = place2;
-					place2 = place1;
-					place1 = i;
-				}
-				else if (place2 > -1)
-				{
-					if (sum_of_scores[i] >= sum_of_scores[place2] && sum_of_scores[i] != 0)
-					{
-						place3 = place2;
-						place2 = i;
-					}
-				}
-				else if (place2 > -1)
-					if (sum_of_scores[i] >= sum_of_scores[place3] && sum_of_scores[i] != 0)
-						place3 = i;
+				place2 = 0;
+				place1 = 1;
 			}
 			table->players[place1]->total_score += p->first_place;
 			cout << table->players[place1]->nickname << " gets " << p->first_place << " points.\n";
-			if (place2 > -1)
-				table->players[place2] += p->second_place;
-			if (place3 > -1)
-				table->players[place3] += p->fird_place;
+			table->players[place2]->total_score += p->second_place;
+			cout << table->players[place2]->nickname << " gets " << p->second_place << " points.\n";
 			cout << p->name_base << " was captured.\n";
 			//Этап после захвата базы
 			table->delete_base(p, all_bases);
@@ -218,6 +203,10 @@ int main()
 
 void special1()
 {
+	Base* q = table->check_capture();
+	string s;
+	cout << "Do you want to place card Pirate King on a base " << q->name_base << "? (Yes/No)\n";
+	cin >> s;
 }
 
 void special2()

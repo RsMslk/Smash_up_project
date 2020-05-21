@@ -14,7 +14,7 @@ public:
 	{
 		players.push_back(q);
 	}
-	void creating_bases(vector<class Base*> all_bases)
+	void creating_bases(vector<class Base*>& all_bases)
 	{
 		int k;
 		srand(time(0));
@@ -25,7 +25,7 @@ public:
 			all_bases.erase(all_bases.begin() + k);
 		}
 	}
-	void delete_base(class Base* p, vector<class Base*> all_bases)
+	void delete_base(class Base* p, vector<class Base*>& all_bases)
 	{
 		int k;
 		srand(time(0));
