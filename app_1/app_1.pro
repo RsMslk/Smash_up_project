@@ -22,9 +22,16 @@ SOURCES += \
     settings.cpp
 
 HEADERS += \
+    base.h \
+    card.h \
+    card.h \
     game_window.h \
     mainwindow.h \
-    settings.h
+    player.h \
+    player.h \
+    settings.h \
+    table.h \
+    table.h
 
 FORMS += \
     game_window.ui \
