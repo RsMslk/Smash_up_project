@@ -18,5 +18,4 @@ select_player::~select_player()
 void select_player::on_buttonBox_accepted()
 {
     number_of_players = ui->player_counter_box->value();
-
 }

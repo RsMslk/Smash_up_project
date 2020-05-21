@@ -259,7 +259,7 @@
      </spacer>
     </item>
     <item>
-     <widget class="QLabel" name="label">
+     <widget class="QLabel" name="current_player_VP">
       <property name="font">
        <font>
         <family>Constantia</family>
@@ -510,7 +510,7 @@
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QLabel" name="player_1_fr_5">
+     <widget class="QLabel" name="player_1_VP">
       <property name="minimumSize">
        <size>
         <width>36</width>
@@ -527,12 +527,12 @@
        <enum>QFrame::Box</enum>
       </property>
       <property name="text">
-       <string>FR1</string>
+       <string>VP1</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QLabel" name="player_1_fr_4">
+     <widget class="QLabel" name="player_2_VP">
       <property name="minimumSize">
        <size>
         <width>36</width>
@@ -549,12 +549,12 @@
        <enum>QFrame::Box</enum>
       </property>
       <property name="text">
-       <string>FR1</string>
+       <string>VP2</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QLabel" name="player_1_fr_3">
+     <widget class="QLabel" name="player_3_VP">
       <property name="minimumSize">
        <size>
         <width>36</width>
@@ -571,11 +571,22 @@
        <enum>QFrame::Box</enum>
       </property>
       <property name="text">
-       <string>FR1</string>
+       <string>VP3</string>
       </property>
      </widget>
     </item>
    </layout>
+  </widget>
+  <widget class="QWidget" name="horizontalLayoutWidget_3">
+   <property name="geometry">
+    <rect>
+     <x>189</x>
+     <y>9</y>
+     <width>811</width>
+     <height>461</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_3"/>
   </widget>
  </widget>
  <resources/>

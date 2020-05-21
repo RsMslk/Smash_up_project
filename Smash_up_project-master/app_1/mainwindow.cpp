@@ -18,7 +18,6 @@ extern QString file_name;
 QString player_nickname_mainwindow = NULL;
 //QPixmap player_avatar_mainwindow = QPixmap(":/images/images/avatar_default.png");
 QString player_avatar_file_path = ":/images/images/avatar_default.png";
-
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -84,7 +83,9 @@ void MainWindow::on_offline_button_clicked()
 {
 //    close();
 //    hide();
-    //select_player()
+    select_player select;
+    select.setModal(true);
+    select.exec();
     game_window game;
     game.setModal(true);
     game.exec();
