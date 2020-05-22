@@ -3,6 +3,7 @@
 
 #include <QDialog>
 
+
 namespace Ui {
 class select_player;
 }
@@ -18,6 +19,8 @@ public:
 
 private slots:
     void on_buttonBox_accepted();
+
+    //void on_buttonBox_clicked(QAbstractButton *button);
 
 private:
     Ui::select_player *ui;

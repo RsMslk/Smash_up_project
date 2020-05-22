@@ -2,7 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-
+#include <select_fraction.h>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -39,6 +39,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    select_fraction * select_frac;
 
 };
 #endif // MAINWINDOW_H

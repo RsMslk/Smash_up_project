@@ -19,18 +19,23 @@ SOURCES += \
     game_window.cpp \
     main.cpp \
     mainwindow.cpp \
+    qdynamicbutton.cpp \
+    select_fraction.cpp \
     select_player.cpp \
     settings.cpp
 
 HEADERS += \
     game_window.h \
     mainwindow.h \
+    qdynamicbutton.h \
+    select_fraction.h \
     select_player.h \
     settings.h
 
 FORMS += \
     game_window.ui \
     mainwindow.ui \
+    select_fraction.ui \
     select_player.ui \
     settings.ui
 

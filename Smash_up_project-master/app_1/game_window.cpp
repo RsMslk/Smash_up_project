@@ -17,22 +17,22 @@ game_window::game_window(QWidget *parent) :
 
 
 
-    if(number_of_players ==2){
+    if(number_of_players == 2){
 
-        delete ui->player_2_avatar;
-        delete ui->player_2_fr_1;
-        delete ui->player_2_fr_2;
-        delete ui->player_3_fr_1;
-        delete ui->player_3_fr_2;
-        delete ui->player_3_avatar;
-       // delete ui->player_2_VP;
-       //delete ui->player_3_VP;
+        ui->player_2_avatar->setVisible(0);
+        ui->player_2_fr_1->setVisible(0);
+        ui->player_2_fr_2->setVisible(0);
+        ui->player_3_fr_1->setVisible(0);
+        ui->player_3_fr_2->setVisible(0);
+        ui->player_3_avatar->setVisible(0) ;
+        //ui->player_2_VP->setVisible(0);
+       // ui->player_3_VP->setVisible(0);
     }
     if(number_of_players == 3){
-        delete ui->player_3_fr_1;
-        delete ui->player_3_fr_2;
-        delete ui->player_3_avatar;
-       // delete ui->player_3_VP;
+        ui->player_3_fr_1 ->setVisible(0);
+        ui->player_3_fr_2->setVisible(0);
+        ui->player_3_avatar->setVisible(0);
+        //ui->player_3_VP->setVisible(0);
     }
 
 

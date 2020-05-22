@@ -10,7 +10,7 @@
 #include <QPainter>
 #include <QPaintEvent>
 #include <select_player.h>
-
+#include <select_fraction.h>
 extern QString  new_nickname_global;
 //extern QPixmap new_avatar;
 extern QString file_name;
@@ -18,6 +18,8 @@ extern QString file_name;
 QString player_nickname_mainwindow = NULL;
 //QPixmap player_avatar_mainwindow = QPixmap(":/images/images/avatar_default.png");
 QString player_avatar_file_path = ":/images/images/avatar_default.png";
+
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -86,9 +88,15 @@ void MainWindow::on_offline_button_clicked()
     select_player select;
     select.setModal(true);
     select.exec();
-    game_window game;
-    game.setModal(true);
-    game.exec();
+    select_fraction select_fr;
+    //select_fr.setModal(true);
+    select_frac = new select_fraction(this);
+    select_frac->show();
+
+
+   // game_window game;
+   // game.setModal(true);
+   // game.exec();
 
 }
 
