@@ -5,14 +5,16 @@
 class Card
 {
 public:
-    Card(QString name, int score)
+    Card(QString name, int score, int i)
     {
         name_card = name;
         power_score = score;
+        id = i;
     }
     QString name_card;
     int power_score;
     int player_card;
+    int id;
 private:
 };
 
