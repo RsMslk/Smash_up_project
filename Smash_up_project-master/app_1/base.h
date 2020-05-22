@@ -6,13 +6,14 @@
 class Base
 {
 public:
-    Base(QString name, int f, int s, int f_3, int d)
+    Base(QString name, int f, int s, int f_3, int d, int i)
     {
         name_base = name;
         first_place = f;
         second_place = s;
         fird_place = f_3;
         defense = d;
+        id = i;
     }
     void add_card(Card* c)
     {
@@ -35,6 +36,7 @@ public:
     int first_place;
     int second_place;
     int fird_place;
+    int id;
 private:
     int defense;
 };

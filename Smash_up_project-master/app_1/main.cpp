@@ -58,14 +58,14 @@ Card* ninja42 = new Card("Ninja Acolyte", 2);
 Card* ninja43 = new Card("Ninja Acolyte", 2);
 Card* ninja44 = new Card("Ninja Acolyte", 2);
 
-Base* base1 = new Base("Jungle Oasis", 2, 0, 0, 12);
-Base* base2 = new Base("Tar Pits", 4, 3, 2, 16);
-Base* base3 = new Base("Ninja Dojo", 2, 3, 2, 18);
-Base* base4 = new Base("Temple of Goju", 2, 3, 2, 18);
-Base* base5 = new Base("The Grey Opal", 3, 1, 1, 17);
-Base* base6 = new Base("Tortuga", 4, 3, 2, 21);
-Base* base7 = new Base("Cave of Shinies", 4, 2, 1, 23);
-Base* base8 = new Base("Mushroom Kingdom", 5, 3, 2, 20);
+Base* base1 = new Base("Jungle Oasis", 2, 0, 0, 12, 0);
+Base* base2 = new Base("Tar Pits", 4, 3, 2, 16, 1);
+Base* base3 = new Base("Ninja Dojo", 2, 3, 2, 18, 2);
+Base* base4 = new Base("Temple of Goju", 2, 3, 2, 18, 3);
+Base* base5 = new Base("The Grey Opal", 3, 1, 1, 17, 4);
+Base* base6 = new Base("Tortuga", 4, 3, 2, 21, 5);
+Base* base7 = new Base("Cave of Shinies", 4, 2, 1, 23, 6);
+Base* base8 = new Base("Mushroom Kingdom", 5, 3, 2, 20, 7);
 
 Table* table;
 
