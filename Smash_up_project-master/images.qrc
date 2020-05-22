@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>avatar_default.png</file>
+        <file>images/avatar_default.png</file>
+        <file>images/background.jpg</file>
+        <file>images/Ninjas.png</file>
+        <file>images/Dinos.png</file>
+        <file>images/goblins.png</file>
+        <file>images/Pirates.png</file>
+    </qresource>
+</RCC>
