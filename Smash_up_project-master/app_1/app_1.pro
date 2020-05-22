@@ -26,13 +26,17 @@ SOURCES += \
     settings.cpp
 
 HEADERS += \
+    base.h \
+    card.h \
     fr_sel.h \
     game_window.h \
     mainwindow.h \
+    player.h \
     qdynamicbutton.h \
     select_fraction.h \
     select_player.h \
-    settings.h
+    settings.h \
+    table.h
 
 FORMS += \
     fr_sel.ui \

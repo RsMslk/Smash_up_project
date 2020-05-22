@@ -4,5 +4,22 @@
         <file>images/avatar_default.png</file>
         <file>images/background.jpg</file>
         <file>images/Ninjas.png</file>
+        <file>images/pirate1.jpg</file>
+        <file>images/pirate2.jpg</file>
+        <file>images/pirate4.jpg</file>
+        <file>images/pirate3.png</file>
+        <file>images/dino/dino1.png</file>
+        <file>images/dino/dino2.png</file>
+        <file>images/dino/howl.png</file>
+        <file>images/dino/dino4.jpg</file>
+        <file>../../../../../../../Downloads/zames.zip</file>
+        <file>images/poni1.png</file>
+        <file>images/poni2.jpg</file>
+        <file>images/poni3.png</file>
+        <file>images/poni4.jpg</file>
+        <file>images/ninja1.jpg</file>
+        <file>images/ninja2.png</file>
+        <file>images/ninja3.jpg</file>
+        <file>images/ninja4.jpg</file>
     </qresource>
 </RCC>

@@ -14,49 +14,49 @@
 
 //QString player_nickname = NULL;
 
-Card* pirate1 = new Card("Pirate King", 5, 11);
-Card* pirate21 = new Card("Buccaneer", 4, 12);
-Card* pirate22 = new Card("Buccaneer", 4, 12);
-Card* pirate31 = new Card("Saucy Wench", 3, 13);
-Card* pirate32 = new Card("Saucy Wench", 3, 13);
-Card* pirate33 = new Card("Saucy Wench", 3, 13);
-Card* pirate41 = new Card("First Mate", 2, 14);
-Card* pirate42 = new Card("First Mate", 2, 14);
-Card* pirate43 = new Card("First Mate", 2, 14);
-Card* pirate44 = new Card("First Mate", 2, 14);
+Card* pirate1 = new Card("Pirate King", 5, 11, QPixmap(":/images/images/pirate1"));
+Card* pirate21 = new Card("Buccaneer", 4, 12, QPixmap(":/images/images/pirate2"));
+Card* pirate22 = new Card("Buccaneer", 4, 12, QPixmap(":/images/images/pirate2"));
+Card* pirate31 = new Card("Saucy Wench", 3, 13, QPixmap(":/images/images/pirate3"));
+Card* pirate32 = new Card("Saucy Wench", 3, 13, QPixmap(":/images/images/pirate3"));
+Card* pirate33 = new Card("Saucy Wench", 3, 13, QPixmap(":/images/images/pirate3"));
+Card* pirate41 = new Card("First Mate", 2, 14, QPixmap(":/images/images/pirate4"));
+Card* pirate42 = new Card("First Mate", 2, 14, QPixmap(":/images/images/pirate4"));
+Card* pirate43 = new Card("First Mate", 2, 14, QPixmap(":/images/images/pirate4"));
+Card* pirate44 = new Card("First Mate", 2, 14, QPixmap(":/images/images/pirate4"));
 
-Card* dino1 = new Card("King Rex", 7, 21);
-Card* dino21 = new Card("Laseratops", 4, 22);
-Card* dino22 = new Card("Laseratops", 4, 22);
-Card* dino31 = new Card("Armor Stego", 3, 23);
-Card* dino32 = new Card("Armor Stego", 3, 23);
-Card* dino33 = new Card("Armor Stego", 3, 23);
-Card* dino41 = new Card("War Raptor", 2, 24);
-Card* dino42 = new Card("War Raptor", 2, 24);
-Card* dino43 = new Card("War Raptor", 2, 24);
-Card* dino44 = new Card("War Raptor", 2, 24);
+Card* dino1 = new Card("King Rex", 7, 21, QPixmap(":/images/images/dino1"));
+Card* dino21 = new Card("Laseratops", 4, 22, QPixmap(":/images/images/dino2"));
+Card* dino22 = new Card("Laseratops", 4, 22, QPixmap(":/images/images/dino2"));
+Card* dino31 = new Card("Armor Stego", 3, 23, QPixmap(":/images/images/howl"));
+Card* dino32 = new Card("Armor Stego", 3, 23, QPixmap(":/images/images/howl"));
+Card* dino33 = new Card("Armor Stego", 3, 23, QPixmap(":/images/images/howl"));
+Card* dino41 = new Card("War Raptor", 2, 24, QPixmap(":/images/images/dino4"));
+Card* dino42 = new Card("War Raptor", 2, 24, QPixmap(":/images/images/dino4"));
+Card* dino43 = new Card("War Raptor", 2, 24, QPixmap(":/images/images/dino4"));
+Card* dino44 = new Card("War Raptor", 2, 24, QPixmap(":/images/images/dino4"));
 
-Card* prank1 = new Card("Leprechaun", 5, 31);
-Card* prank21 = new Card("Brownie", 4, 32);
-Card* prank22 = new Card("Brownie", 4, 32);
-Card* prank31 = new Card("Gnome", 3, 33);
-Card* prank32 = new Card("Gnome", 3, 33);
-Card* prank33 = new Card("Gnome", 3, 33);
-Card* prank41 = new Card("Gremlin", 2, 34);
-Card* prank42 = new Card("Gremlin", 2, 34);
-Card* prank43 = new Card("Gremlin", 2, 34);
-Card* prank44 = new Card("Gremlin", 2, 34);
+Card* prank1 = new Card("Leprechaun", 5, 31, QPixmap(":/images/images/poni1"));
+Card* prank21 = new Card("Brownie", 4, 32, QPixmap(":/images/images/poni2"));
+Card* prank22 = new Card("Brownie", 4, 32, QPixmap(":/images/images/poni2"));
+Card* prank31 = new Card("Gnome", 3, 33, QPixmap(":/images/image/poni3"));
+Card* prank32 = new Card("Gnome", 3, 33, QPixmap(":/images/images/poni3"));
+Card* prank33 = new Card("Gnome", 3, 33, QPixmap(":/images/images/poni3"));
+Card* prank41 = new Card("Gremlin", 2, 34, QPixmap(":/images/images/poni4"));
+Card* prank42 = new Card("Gremlin", 2, 34, QPixmap(":/images/images/poni4"));
+Card* prank43 = new Card("Gremlin", 2, 34, QPixmap(":/images/images/poni4"));
+Card* prank44 = new Card("Gremlin", 2, 34, QPixmap(":/images/images/poni4"));
 
-Card* ninja1 = new Card("Ninja Master", 5, 41);
-Card* ninja21 = new Card("Tiger Assasin", 4, 42);
-Card* ninja22 = new Card("Tiger Assasin", 4, 42);
-Card* ninja31 = new Card("Shinobi", 3, 43);
-Card* ninja32 = new Card("Shinobi", 3, 43);
-Card* ninja33 = new Card("Shinobi", 3, 43);
-Card* ninja41 = new Card("Ninja Acolyte", 2, 44);
-Card* ninja42 = new Card("Ninja Acolyte", 2, 44);
-Card* ninja43 = new Card("Ninja Acolyte", 2, 44);
-Card* ninja44 = new Card("Ninja Acolyte", 2, 44);
+Card* ninja1 = new Card("Ninja Master", 5, 41, QPixmap(":/images/images/ninja1"));
+Card* ninja21 = new Card("Tiger Assasin", 4, 42, QPixmap(":/images/images/ninja2"));
+Card* ninja22 = new Card("Tiger Assasin", 4, 42, QPixmap(":/images/images/ninja2"));
+Card* ninja31 = new Card("Shinobi", 3, 43, QPixmap(":/images/images/ninja3"));
+Card* ninja32 = new Card("Shinobi", 3, 43, QPixmap(":/images/images/ninja3"));
+Card* ninja33 = new Card("Shinobi", 3, 43, QPixmap(":/images/images/ninja3"));
+Card* ninja41 = new Card("Ninja Acolyte", 2, 44, QPixmap(":/images/images/ninja4"));
+Card* ninja42 = new Card("Ninja Acolyte", 2, 44, QPixmap(":/images/images/ninja4"));
+Card* ninja43 = new Card("Ninja Acolyte", 2, 44, QPixmap(":/images/images/ninja4"));
+Card* ninja44 = new Card("Ninja Acolyte", 2, 44, QPixmap(":/images/images/ninja4"));
 
 Base* base1 = new Base("Jungle Oasis", 2, 0, 0, 12, 0);
 Base* base2 = new Base("Tar Pits", 4, 3, 2, 16, 1);
@@ -72,7 +72,6 @@ Table* table;
 extern int number_of_players;
 extern int player_0_fr_1, player_0_fr_2, player_1_fr_1, player_1_fr_2;
 extern QString player_nickname_mainwindow;
-int N=2, n1=1, n2=2; //N-количество игроков, n1, n2 - выбор фракций
 
 int main(int argc, char *argv[])
 {
@@ -98,24 +97,15 @@ int main(int argc, char *argv[])
     table->add_player(q);
     Player* p = new Player("Default", all_fractions[player_1_fr_1], all_fractions[player_1_fr_2], 1);
     table->add_player(p);
-    /*while (table->end_game())
+    while (table->end_game())
     {
-        if (N!=0)
-            table->play_turn %= N;
-        //cout << table->players[table->play_turn]->nickname << ", you may go! Choose one card in your hand:\n";
-        //table->players[table->play_turn]->print_hand();
-        //cin >> n1;
-        //cout << "Choose base on which you want place your card:\n";
-        //cin >> n2;
-        n1--;
-        n2--;
-        table->place_card_on_base(n1, n2);
+        if (number_of_players!=0)
+            table->play_turn %= number_of_players;
+        table->place_card_on_base(0, 0);
         Base* p = table->check_capture();
         if (p != nullptr)
         {
-            //cout << p->name_base <<" is ready to be captured.\n";
-            //Этап до захвата базы
-            QVector<int> sum_of_scores(N);
+            QVector<int> sum_of_scores(number_of_players);
             for (int i = 0; i < p->play_cards.size(); i++)
             {
                 sum_of_scores[p->play_cards[i]->player_card] += p->play_cards[i]->power_score;
@@ -127,24 +117,19 @@ int main(int argc, char *argv[])
                 place1 = 1;
             }
             table->players[place1]->total_score += p->first_place;
-            //cout << table->players[place1]->nickname << " gets " << p->first_place << " points.\n";
             table->players[place2]->total_score += p->second_place;
-            //cout << table->players[place2]->nickname << " gets " << p->second_place << " points.\n";
-            //cout << p->name_base << " was captured.\n";
-            //Этап после захвата базы
             table->delete_base(p, all_bases);
         }
         table->play_turn++;
+        break;
     }
-    for (int i = 0; i < N; i++)
+    for (int i = 0; i < number_of_players; i++)
     {
         if (table->players[i]->total_score >= 15)
         {
-            //cout << table->players[i]->nickname << " is a winner!\n";
             break;
         }
-    }*/
-
+    }
     w.setFixedSize(800,600);
     w.show();
 
