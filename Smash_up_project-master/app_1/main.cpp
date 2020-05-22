@@ -12,7 +12,7 @@
 #include <table.h>
 
 
-QString player_nickname = NULL;
+//QString player_nickname = NULL;
 
 Card* pirate1 = new Card("Pirate King", 5);
 Card* pirate21 = new Card("Buccaneer", 4);
@@ -77,7 +77,7 @@ int main(int argc, char *argv[])
     QDesktopWidget dw;
     MainWindow w;
 
-    /*QVector<Card*> pirates = { pirate1, pirate21, pirate22, pirate31, pirate32, pirate33, pirate41, pirate42, pirate43, pirate44 };
+   /* QVector<Card*> pirates = { pirate1, pirate21, pirate22, pirate31, pirate32, pirate33, pirate41, pirate42, pirate43, pirate44 };
     Fraction* Pirates = new Fraction("Pirates", pirates);
     QVector<Card*> dinos = { dino1, dino21, dino22, dino31, dino32, dino33, dino41, dino42, dino43, dino44 };
     Fraction* Dinos = new Fraction("Dinosaurs", dinos);

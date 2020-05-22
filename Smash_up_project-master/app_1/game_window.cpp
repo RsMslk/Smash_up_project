@@ -4,6 +4,7 @@
 #include <QtWidgets>
 #include <QLayoutItem>
 #include <QSpacerItem>
+
 extern int number_of_players;
 
 int Num;

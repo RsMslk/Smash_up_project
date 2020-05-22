@@ -16,6 +16,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    fr_sel.cpp \
     game_window.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -25,6 +26,7 @@ SOURCES += \
     settings.cpp
 
 HEADERS += \
+    fr_sel.h \
     game_window.h \
     mainwindow.h \
     qdynamicbutton.h \
@@ -33,6 +35,7 @@ HEADERS += \
     settings.h
 
 FORMS += \
+    fr_sel.ui \
     game_window.ui \
     mainwindow.ui \
     select_fraction.ui \

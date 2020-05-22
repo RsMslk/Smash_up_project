@@ -11,6 +11,7 @@
 #include <QPaintEvent>
 #include <select_player.h>
 #include <select_fraction.h>
+#include <fr_sel.h>
 extern QString  new_nickname_global;
 //extern QPixmap new_avatar;
 extern QString file_name;
@@ -88,10 +89,14 @@ void MainWindow::on_offline_button_clicked()
     select_player select;
     select.setModal(true);
     select.exec();
-    select_fraction select_fr;
+    fr_sel frac_sel;
+    frac_sel.setModal(true);
+    frac_sel.exec();
+    //select_fraction select_fr;
     //select_fr.setModal(true);
-    select_frac = new select_fraction(this);
-    select_frac->show();
+   // select_frac = new select_fraction(this);
+   // select_frac->show();
+
 
 
    // game_window game;

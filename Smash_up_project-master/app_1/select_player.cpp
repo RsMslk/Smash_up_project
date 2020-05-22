@@ -22,7 +22,7 @@ void select_player::on_buttonBox_accepted()
     number_of_players = ui->player_counter_box->value();
     select_fraction select_fr;
     //select_fr.setModal(true);
-    select_fr.show();
+    //select_fr.show();
 
 }
 

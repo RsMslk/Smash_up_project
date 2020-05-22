@@ -3,5 +3,6 @@
         <file>avatar_default.png</file>
         <file>images/avatar_default.png</file>
         <file>images/background.jpg</file>
+        <file>images/Ninjas.png</file>
     </qresource>
 </RCC>
